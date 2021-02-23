@@ -1,6 +1,6 @@
 # db/seeds.rb
 puts 'Cleaning database...'
-Orders.destroy_all
+Order.destroy_all
 Teddy.destroy_all
 Category.destroy_all
 
