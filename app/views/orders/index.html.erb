@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Orders</h1>
+  <div class="row">
+    <% @orders.each do |order| %>
+      <div class="col-6 col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= "Order ##{order.id}" %></h5>
+            <p class="card-text"><%= "State: #{order.state}" %></p>
+            <p>Amount: <%= humanized_money_with_symbol(order.amount) %></p>
+            <%= link_to "More details", order_path(order), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
