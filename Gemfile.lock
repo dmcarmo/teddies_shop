@@ -117,6 +117,15 @@ GEM
     mimemagic (0.3.5)
     mini_mime (1.0.2)
     minitest (5.14.3)
+    monetize (1.9.4)
+      money (~> 6.12)
+    money (6.13.8)
+      i18n (>= 0.6.4, <= 2)
+    money-rails (1.13.4)
+      activesupport (>= 3.0)
+      monetize (~> 1.9.0)
+      money (~> 6.13.2)
+      railties (>= 3.0)
     msgpack (1.4.2)
     nio4r (2.5.5)
     nokogiri (1.11.1-x86_64-linux)
@@ -203,6 +212,10 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stripe (5.30.0)
+    stripe_event (2.3.1)
+      activesupport (>= 3.1)
+      stripe (>= 2.8, < 6)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -246,6 +259,7 @@ DEPENDENCIES
   font-awesome-sass
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  money-rails
   pg (~> 1.1)
   pry-byebug
   pry-rails
@@ -257,6 +271,8 @@ DEPENDENCIES
   selenium-webdriver
   simple_form
   spring
+  stripe
+  stripe_event
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
