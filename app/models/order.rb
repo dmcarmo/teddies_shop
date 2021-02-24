@@ -1,6 +1,6 @@
 class Order < ApplicationRecord
   belongs_to :user
-  belongs_to :teddy
+  has_many :line_items, dependent: :destroy
 
   monetize :amount_cents
 end
