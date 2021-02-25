@@ -14,9 +14,8 @@
   <% end %>
 </ul>
 <h3>Sub total: <%= number_to_currency(@cart.sub_total) %></h3>
-<%= link_to "Proceed to checkout", new_order_path %><br>
 <%= form_tag orders_path do %>
   <%= hidden_field_tag 'cart_id', @cart.id %>
-  <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+  <%= submit_tag 'Checkout', class: 'btn btn-primary' %>
 <% end %>
 <%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"} %>
