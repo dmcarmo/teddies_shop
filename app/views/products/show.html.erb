@@ -7,10 +7,8 @@
       <h1><%= @product.name %></h1>
       <p>Some awesome description of our amazing product.</p>
       <p>Amount: <%= humanized_money_with_symbol(@product.price) %></p>
-      <%= form_tag orders_path do %>
-        <%= hidden_field_tag 'product_id', @product.id %>
-        <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-      <% end %>
+      <%= button_to "Add #{@product.name} to cart", line_items_path(product_id: @product.id), class: 'btn btn-primary' %>
+      <br>
     </div>
   </div>
 </div>
